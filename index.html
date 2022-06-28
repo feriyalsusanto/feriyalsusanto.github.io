@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Winda Pramesti">
     <title>Feriyal and Winda</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <!-- CSS Bootstrap & Fontawesome-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -94,7 +95,7 @@
         Send Gift
     </a>
     <a href="javascript:void(0)" onclick="playMusic()" class="float">
-        <i id="music-icon" class="fa fa-pause my-float"></i>
+        <i id="music-icon" class="fa fa-pause"></i>
     </a>
     <!-- end:: wedding gift -->
 
@@ -113,10 +114,18 @@
                     <p>
                         <i>Kepada Yth<br />Bapak/Ibu/Saudara/i</i>
                     </p>
-                    <!-- <h3>
-                        Prof. Supardi MM
-                        <span>Malang</span>
-                    </h3> -->
+                    <h3 id="user">
+                        ''
+                        <span id="from"></span>
+                    </h3>
+                    <script>
+                        var url_string = window.location.href;
+                        var url = new URL(url_string);
+                        var c = url.searchParams.get("name");
+                        var d = url.searchParams.get("from");
+                        user.firstChild.data = c;
+                        document.getElementById("from").textContent = d;
+                    </script>
                     <p>Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Menghadiri Acara Pernikahan Kami.</p>
                     <a href="#" class="btn-open" onclick="playMusic()">Open Invitation</a>
                 </div>
@@ -138,10 +147,18 @@
                         <p>
                             <i>Kepada Yth<br />Bapak/Ibu/Saudara/i</i>
                         </p>
-                        <!-- <h3>
-                            Prof. Supardi MM
-                            <span>Malang</span>
-                        </h3> -->
+                        <h3 id="user2">
+                            ''
+                            <span id="from2"></span>
+                        </h3>
+                        <script>
+                            var url_string = window.location.href;
+                            var url = new URL(url_string);
+                            var c = url.searchParams.get("name");
+                            var d = url.searchParams.get("from");
+                            user2.firstChild.data = c;
+                            document.getElementById("from2").textContent = d;
+                        </script>
                         <p>Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Menghadiri Acara Pernikahan Kami.
                         </p>
                     </div>
@@ -150,6 +167,9 @@
         </section>
         <section class="wf-section text-center" id="section-bride">
             <div class="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                </div>
                 <div class="row">
                     <div class="col">
                         <p data-aos="fade-up">
@@ -181,7 +201,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="wf-bride-middle" style="flex: unset;" data-aos="zoom-in">
+                            <div class="wf-bride-middle" data-aos="zoom-in">
                                 <img src="./assets/img/dove.png" alt="image" width="35">
                             </div>
                             <div class="wf-bride-col" data-aos="fade-left" data-aos-duration="4000">
@@ -212,7 +232,7 @@
             </div>
         </section>
         <section class="wf-section text-center" id="section-schedule" data-aos="fade-up">
-            <div class="container">
+            <div class="d-table mx-auto">
                 <div class="row">
                     <div class="col">
                         <h2 class="title-section">Wedding Schedule</h2>
@@ -491,7 +511,8 @@
                             <span class="story-date">2022 - February</span>
                         </div>
                     </div>
-                    <div class="slide-item" style="background-image: url('./assets/img/bg-wedding.png');">
+                    <div class="slide-item"
+                        style="background-image: url('./assets/img/bg-wedding.png'); background-position: 52%;">
                         <div class="story-item">
                             <h2 class="title-section">Our Love Story</h2>
                             <h1 class="story-name">
